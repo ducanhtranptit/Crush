@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biểu mẫu Câu hỏi</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .question-form {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .question {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .answer-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .answer-button:hover {
+        background-color: #0056b3;
+      }
+
+      .answer-button:hover {
+        background-color: #ff5733; /* Thay đổi màu nền khi hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="question-form">
+      <p class="question">Bạn nghĩ Crush có thích mình không?</p>
+      <button class="answer-button" id="yes-button">
+        <span class="yes-text">Có</span>
+        <!-- <span class="no-text">Không</span> -->
+      </button>
+      <button class="answer-button" id="no-button">
+        <!-- <span class="yes-text">Có</span> -->
+        <span class="no-text">Không</span>
+      </button>
+    </div>
+    <script>
+      "use strict";
+      const yesBtn = document.getElementById("yes-button");
+      const noBtn = document.getElementById("no-button");
+
+      // Xử lý sự kiện khi nút "Có" được nhấn
+      yesBtn.addEventListener("click", function () {
+        alert("Rất tốt! Bạn đã đưa ra câu trả lời hoàn toàn đúng!");
+      });
+
+      yesBtn.addEventListener("mouseenter", function () {
+        yesBtn.textContent = "Không";
+      });
+
+      yesBtn.addEventListener("mouseleave", function () {
+        yesBtn.textContent = "Có";
+      });
+
+      // Xử lý sự kiện khi nút "Không" được nhấn
+      noBtn.addEventListener("click", function () {
+        alert("Rất tốt! Bạn biết điều đấy!");
+      });
+    </script>
+  </body>
+</html>
